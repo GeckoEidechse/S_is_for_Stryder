@@ -45,7 +45,7 @@ jobs:
           # Name of the package
           name: ${{ env.name }} # This can be modified if the package name differs from the repo name
           # Package version to publish
-          version: ${{ env.cleanVersion }} # This is the tag that was created in the release but without the leading 'v'
+          version: ${{ github.ref_name }} # This is the tag that was created in the release but without the leading 'v'
           # Description of the mod
           description: S is for Stryder
           # Thunderstore API token
