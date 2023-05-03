@@ -37,7 +37,7 @@ jobs:
           rm -f ${{ github.workspace }}/compressed/assets.tar.gz* # delete assets
           rm *.sh # Delete the asset splitting scripts
       - name: Upload Thunderstore Package
-        uses: GreenTF/upload-thunderstore-package@v3.1
+        uses: GreenTF/upload-thunderstore-package@v4
         with:
           community: northstar
           # Name of the team to publish the mod under
