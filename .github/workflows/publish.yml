@@ -35,6 +35,7 @@ jobs:
           cat ${{ github.workspace }}/compressed/assets.tar.gz.* > ${{ github.workspace }}/compressed/assets.tar.gz # concat assets
           tar -xvf ${{ github.workspace }}/compressed/assets.tar.gz # extract concatinated assets
           rm -f ${{ github.workspace }}/compressed/assets.tar.gz* # delete assets
+          rm *.sh # Delete the asset splitting scripts
       - name: Upload Thunderstore Package
         uses: GreenTF/upload-thunderstore-package@v3.1
         with:
