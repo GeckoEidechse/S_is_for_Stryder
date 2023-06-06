@@ -37,7 +37,7 @@ jobs:
           rm -f ${{ github.workspace }}/compressed/assets.tar.gz* # delete assets
           rm *.sh # Delete the asset splitting scripts
       - name: Upload Thunderstore Package
-        uses: GreenTF/upload-thunderstore-package@v4
+        uses: GreenTF/upload-thunderstore-package@ad676fb6814de065430f226de9930cec3c811bb3
         with:
           community: northstar
           # Name of the team to publish the mod under
@@ -54,5 +54,7 @@ jobs:
           # Directory to wrap the contents of the repo in
           wrap: mods/${{ github.repository_owner }}.${{ env.name }} # This will wrap your Author.ModName folder in a mods/ folder before publishing
           #deps: "northstar-Northstar@1.9.3" # <------------- Uncomment this line to add dependencies to your mod, each sparated by a space
+          repo: northstar.thunderstore.io
           categories: |
             mods
+            custom-menus
